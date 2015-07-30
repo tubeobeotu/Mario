@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  MainSceneBall.h
 //  Mario
 //
 //  Created by nguyenvantu on 7/30/15.
 //  Copyright (c) 2015 nguyenvantu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Scene.h"
 
-@interface ViewController : UIViewController
-
+@interface MainSceneBall : Scene
 
 @end
-

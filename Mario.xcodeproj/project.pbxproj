@@ -8,49 +8,103 @@
 
 /* Begin PBXBuildFile section */
 		B19550491B69B16B00704047 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B19550481B69B16B00704047 /* main.m */; };
-		B195504C1B69B16B00704047 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B195504B1B69B16B00704047 /* AppDelegate.m */; };
-		B195504F1B69B16B00704047 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B195504E1B69B16B00704047 /* ViewController.m */; };
-		B19550521B69B16B00704047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19550501B69B16B00704047 /* Main.storyboard */; };
 		B19550541B69B16B00704047 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19550531B69B16B00704047 /* Images.xcassets */; };
 		B19550571B69B16B00704047 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19550551B69B16B00704047 /* LaunchScreen.xib */; };
-		B19550631B69B16B00704047 /* MarioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B19550621B69B16B00704047 /* MarioTests.m */; };
+		B19550751B69B23E00704047 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B195506E1B69B23E00704047 /* AppDelegate.m */; };
+		B19550761B69B23E00704047 /* BootLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = B19550701B69B23E00704047 /* BootLogic.m */; };
+		B19550771B69B23E00704047 /* ConsoleScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B19550721B69B23E00704047 /* ConsoleScreen.m */; };
+		B19550781B69B23E00704047 /* MainScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B19550741B69B23E00704047 /* MainScreen.m */; };
+		B195507F1B69B3C000704047 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = B195507C1B69B3C000704047 /* Scene.m */; };
+		B19550801B69B3C000704047 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B195507E1B69B3C000704047 /* Sprite.m */; };
+		B1E5BA541B6A7F6100138E55 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA421B6A7F6100138E55 /* 1.png */; };
+		B1E5BA551B6A7F6100138E55 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA431B6A7F6100138E55 /* 2.png */; };
+		B1E5BA561B6A7F6100138E55 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA441B6A7F6100138E55 /* 3.png */; };
+		B1E5BA571B6A7F6100138E55 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA451B6A7F6100138E55 /* 4.png */; };
+		B1E5BA581B6A7F6100138E55 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA461B6A7F6100138E55 /* 5.png */; };
+		B1E5BA591B6A7F6100138E55 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA471B6A7F6100138E55 /* 6.png */; };
+		B1E5BA5A1B6A7F6100138E55 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA481B6A7F6100138E55 /* 7.png */; };
+		B1E5BA5B1B6A7F6100138E55 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA491B6A7F6100138E55 /* 8.png */; };
+		B1E5BA5C1B6A7F6100138E55 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA4A1B6A7F6100138E55 /* ball.png */; };
+		B1E5BA5D1B6A7F6100138E55 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA4B1B6A7F6100138E55 /* block.png */; };
+		B1E5BA5E1B6A7F6100138E55 /* city.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA4C1B6A7F6100138E55 /* city.png */; };
+		B1E5BA5F1B6A7F6100138E55 /* cloud1.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA4D1B6A7F6100138E55 /* cloud1.png */; };
+		B1E5BA601B6A7F6100138E55 /* cloud2.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA4E1B6A7F6100138E55 /* cloud2.png */; };
+		B1E5BA611B6A7F6100138E55 /* cloud3.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA4F1B6A7F6100138E55 /* cloud3.png */; };
+		B1E5BA621B6A7F6100138E55 /* clown.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA501B6A7F6100138E55 /* clown.png */; };
+		B1E5BA631B6A7F6100138E55 /* fireball.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA511B6A7F6100138E55 /* fireball.png */; };
+		B1E5BA641B6A7F6100138E55 /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA521B6A7F6100138E55 /* gameover.png */; };
+		B1E5BA651B6A7F6100138E55 /* marioKilled.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA531B6A7F6100138E55 /* marioKilled.png */; };
+		B1E5BA6C1B6A7FDF00138E55 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5BA671B6A7FDF00138E55 /* Block.m */; };
+		B1E5BA6D1B6A7FDF00138E55 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5BA691B6A7FDF00138E55 /* City.m */; };
+		B1E5BA6E1B6A7FDF00138E55 /* Cloud.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5BA6B1B6A7FDF00138E55 /* Cloud.m */; };
+		B1E5BA711B6A7FF000138E55 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5BA701B6A7FF000138E55 /* MainScene.m */; };
+		B1E5BA771B6A819800138E55 /* MainSceneBall.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5BA761B6A819800138E55 /* MainSceneBall.m */; };
+		B1E5BA7A1B6A821200138E55 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5BA791B6A821200138E55 /* Ball.m */; };
+		B1E5BA7C1B6A82DD00138E55 /* ballRoll.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA7B1B6A82DD00138E55 /* ballRoll.png */; };
+		B1E5BA801B6A9A6B00138E55 /* blueLight.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA7D1B6A9A6B00138E55 /* blueLight.png */; };
+		B1E5BA811B6A9A6B00138E55 /* redLight.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA7E1B6A9A6B00138E55 /* redLight.png */; };
+		B1E5BA821B6A9A6B00138E55 /* yellowLight.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA7F1B6A9A6B00138E55 /* yellowLight.png */; };
+		B1E5BA851B6A9B3200138E55 /* Power Pole.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E5BA841B6A9B3200138E55 /* Power Pole.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B195505D1B69B16B00704047 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B195503B1B69B16B00704047 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B19550421B69B16B00704047;
-			remoteInfo = Mario;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B19550431B69B16B00704047 /* Mario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mario.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19550471B69B16B00704047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B19550481B69B16B00704047 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B195504A1B69B16B00704047 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B195504B1B69B16B00704047 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B195504D1B69B16B00704047 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B195504E1B69B16B00704047 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B19550511B69B16B00704047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B19550531B69B16B00704047 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B19550561B69B16B00704047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B195505C1B69B16B00704047 /* MarioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B19550611B69B16B00704047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B19550621B69B16B00704047 /* MarioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarioTests.m; sourceTree = "<group>"; };
+		B195506D1B69B23E00704047 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B195506E1B69B23E00704047 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B195506F1B69B23E00704047 /* BootLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BootLogic.h; sourceTree = "<group>"; };
+		B19550701B69B23E00704047 /* BootLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BootLogic.m; sourceTree = "<group>"; };
+		B19550711B69B23E00704047 /* ConsoleScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleScreen.h; sourceTree = "<group>"; };
+		B19550721B69B23E00704047 /* ConsoleScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleScreen.m; sourceTree = "<group>"; };
+		B19550731B69B23E00704047 /* MainScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScreen.h; sourceTree = "<group>"; };
+		B19550741B69B23E00704047 /* MainScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScreen.m; sourceTree = "<group>"; };
+		B195507B1B69B3C000704047 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		B195507C1B69B3C000704047 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		B195507D1B69B3C000704047 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		B195507E1B69B3C000704047 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
+		B1E5BA421B6A7F6100138E55 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		B1E5BA431B6A7F6100138E55 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		B1E5BA441B6A7F6100138E55 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		B1E5BA451B6A7F6100138E55 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		B1E5BA461B6A7F6100138E55 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		B1E5BA471B6A7F6100138E55 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		B1E5BA481B6A7F6100138E55 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		B1E5BA491B6A7F6100138E55 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		B1E5BA4A1B6A7F6100138E55 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		B1E5BA4B1B6A7F6100138E55 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
+		B1E5BA4C1B6A7F6100138E55 /* city.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = city.png; sourceTree = "<group>"; };
+		B1E5BA4D1B6A7F6100138E55 /* cloud1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud1.png; sourceTree = "<group>"; };
+		B1E5BA4E1B6A7F6100138E55 /* cloud2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud2.png; sourceTree = "<group>"; };
+		B1E5BA4F1B6A7F6100138E55 /* cloud3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud3.png; sourceTree = "<group>"; };
+		B1E5BA501B6A7F6100138E55 /* clown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clown.png; sourceTree = "<group>"; };
+		B1E5BA511B6A7F6100138E55 /* fireball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireball.png; sourceTree = "<group>"; };
+		B1E5BA521B6A7F6100138E55 /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
+		B1E5BA531B6A7F6100138E55 /* marioKilled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marioKilled.png; sourceTree = "<group>"; };
+		B1E5BA661B6A7FDF00138E55 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		B1E5BA671B6A7FDF00138E55 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		B1E5BA681B6A7FDF00138E55 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		B1E5BA691B6A7FDF00138E55 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		B1E5BA6A1B6A7FDF00138E55 /* Cloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cloud.h; sourceTree = "<group>"; };
+		B1E5BA6B1B6A7FDF00138E55 /* Cloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cloud.m; sourceTree = "<group>"; };
+		B1E5BA6F1B6A7FF000138E55 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		B1E5BA701B6A7FF000138E55 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
+		B1E5BA751B6A819800138E55 /* MainSceneBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainSceneBall.h; sourceTree = "<group>"; };
+		B1E5BA761B6A819800138E55 /* MainSceneBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSceneBall.m; sourceTree = "<group>"; };
+		B1E5BA781B6A821200138E55 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		B1E5BA791B6A821200138E55 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		B1E5BA7B1B6A82DD00138E55 /* ballRoll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ballRoll.png; sourceTree = "<group>"; };
+		B1E5BA7D1B6A9A6B00138E55 /* blueLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueLight.png; sourceTree = "<group>"; };
+		B1E5BA7E1B6A9A6B00138E55 /* redLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redLight.png; sourceTree = "<group>"; };
+		B1E5BA7F1B6A9A6B00138E55 /* yellowLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowLight.png; sourceTree = "<group>"; };
+		B1E5BA831B6A9B3200138E55 /* Power Pole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Power Pole.h"; sourceTree = "<group>"; };
+		B1E5BA841B6A9B3200138E55 /* Power Pole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Power Pole.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B19550401B69B16B00704047 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B19550591B69B16B00704047 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,8 +117,8 @@
 		B195503A1B69B16B00704047 = {
 			isa = PBXGroup;
 			children = (
+				B1E5BA721B6A80F600138E55 /* BallRoll */,
 				B19550451B69B16B00704047 /* Mario */,
-				B195505F1B69B16B00704047 /* MarioTests */,
 				B19550441B69B16B00704047 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				B19550431B69B16B00704047 /* Mario.app */,
-				B195505C1B69B16B00704047 /* MarioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,11 +134,11 @@
 		B19550451B69B16B00704047 /* Mario */ = {
 			isa = PBXGroup;
 			children = (
-				B195504A1B69B16B00704047 /* AppDelegate.h */,
-				B195504B1B69B16B00704047 /* AppDelegate.m */,
-				B195504D1B69B16B00704047 /* ViewController.h */,
-				B195504E1B69B16B00704047 /* ViewController.m */,
-				B19550501B69B16B00704047 /* Main.storyboard */,
+				B195506C1B69B1EC00704047 /* Core */,
+				B19550791B69B31D00704047 /* GameCore */,
+				B195507A1B69B32500704047 /* ReSource */,
+				B1E5BA401B6A7F1200138E55 /* Sprite */,
+				B1E5BA411B6A7F1800138E55 /* Scene */,
 				B19550531B69B16B00704047 /* Images.xcassets */,
 				B19550551B69B16B00704047 /* LaunchScreen.xib */,
 				B19550461B69B16B00704047 /* Supporting Files */,
@@ -102,21 +155,110 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B195505F1B69B16B00704047 /* MarioTests */ = {
+		B195506C1B69B1EC00704047 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B19550621B69B16B00704047 /* MarioTests.m */,
-				B19550601B69B16B00704047 /* Supporting Files */,
+				B195506D1B69B23E00704047 /* AppDelegate.h */,
+				B195506E1B69B23E00704047 /* AppDelegate.m */,
+				B195506F1B69B23E00704047 /* BootLogic.h */,
+				B19550701B69B23E00704047 /* BootLogic.m */,
+				B19550711B69B23E00704047 /* ConsoleScreen.h */,
+				B19550721B69B23E00704047 /* ConsoleScreen.m */,
+				B19550731B69B23E00704047 /* MainScreen.h */,
+				B19550741B69B23E00704047 /* MainScreen.m */,
 			);
-			path = MarioTests;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		B19550601B69B16B00704047 /* Supporting Files */ = {
+		B19550791B69B31D00704047 /* GameCore */ = {
 			isa = PBXGroup;
 			children = (
-				B19550611B69B16B00704047 /* Info.plist */,
+				B195507B1B69B3C000704047 /* Scene.h */,
+				B195507C1B69B3C000704047 /* Scene.m */,
+				B195507D1B69B3C000704047 /* Sprite.h */,
+				B195507E1B69B3C000704047 /* Sprite.m */,
 			);
-			name = "Supporting Files";
+			path = GameCore;
+			sourceTree = "<group>";
+		};
+		B195507A1B69B32500704047 /* ReSource */ = {
+			isa = PBXGroup;
+			children = (
+				B1E5BA7D1B6A9A6B00138E55 /* blueLight.png */,
+				B1E5BA7E1B6A9A6B00138E55 /* redLight.png */,
+				B1E5BA7F1B6A9A6B00138E55 /* yellowLight.png */,
+				B1E5BA7B1B6A82DD00138E55 /* ballRoll.png */,
+				B1E5BA421B6A7F6100138E55 /* 1.png */,
+				B1E5BA431B6A7F6100138E55 /* 2.png */,
+				B1E5BA441B6A7F6100138E55 /* 3.png */,
+				B1E5BA451B6A7F6100138E55 /* 4.png */,
+				B1E5BA461B6A7F6100138E55 /* 5.png */,
+				B1E5BA471B6A7F6100138E55 /* 6.png */,
+				B1E5BA481B6A7F6100138E55 /* 7.png */,
+				B1E5BA491B6A7F6100138E55 /* 8.png */,
+				B1E5BA4A1B6A7F6100138E55 /* ball.png */,
+				B1E5BA4B1B6A7F6100138E55 /* block.png */,
+				B1E5BA4C1B6A7F6100138E55 /* city.png */,
+				B1E5BA4D1B6A7F6100138E55 /* cloud1.png */,
+				B1E5BA4E1B6A7F6100138E55 /* cloud2.png */,
+				B1E5BA4F1B6A7F6100138E55 /* cloud3.png */,
+				B1E5BA501B6A7F6100138E55 /* clown.png */,
+				B1E5BA511B6A7F6100138E55 /* fireball.png */,
+				B1E5BA521B6A7F6100138E55 /* gameover.png */,
+				B1E5BA531B6A7F6100138E55 /* marioKilled.png */,
+			);
+			path = ReSource;
+			sourceTree = "<group>";
+		};
+		B1E5BA401B6A7F1200138E55 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				B1E5BA661B6A7FDF00138E55 /* Block.h */,
+				B1E5BA671B6A7FDF00138E55 /* Block.m */,
+				B1E5BA681B6A7FDF00138E55 /* City.h */,
+				B1E5BA691B6A7FDF00138E55 /* City.m */,
+				B1E5BA6A1B6A7FDF00138E55 /* Cloud.h */,
+				B1E5BA6B1B6A7FDF00138E55 /* Cloud.m */,
+				B1E5BA831B6A9B3200138E55 /* Power Pole.h */,
+				B1E5BA841B6A9B3200138E55 /* Power Pole.m */,
+			);
+			path = Sprite;
+			sourceTree = "<group>";
+		};
+		B1E5BA411B6A7F1800138E55 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B1E5BA6F1B6A7FF000138E55 /* MainScene.h */,
+				B1E5BA701B6A7FF000138E55 /* MainScene.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		B1E5BA721B6A80F600138E55 /* BallRoll */ = {
+			isa = PBXGroup;
+			children = (
+				B1E5BA731B6A816700138E55 /* Scene */,
+				B1E5BA741B6A816700138E55 /* Sprite */,
+			);
+			path = BallRoll;
+			sourceTree = "<group>";
+		};
+		B1E5BA731B6A816700138E55 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B1E5BA751B6A819800138E55 /* MainSceneBall.h */,
+				B1E5BA761B6A819800138E55 /* MainSceneBall.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		B1E5BA741B6A816700138E55 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				B1E5BA781B6A821200138E55 /* Ball.h */,
+				B1E5BA791B6A821200138E55 /* Ball.m */,
+			);
+			path = Sprite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +281,6 @@
 			productReference = B19550431B69B16B00704047 /* Mario.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B195505B1B69B16B00704047 /* MarioTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B19550691B69B16B00704047 /* Build configuration list for PBXNativeTarget "MarioTests" */;
-			buildPhases = (
-				B19550581B69B16B00704047 /* Sources */,
-				B19550591B69B16B00704047 /* Frameworks */,
-				B195505A1B69B16B00704047 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B195505E1B69B16B00704047 /* PBXTargetDependency */,
-			);
-			name = MarioTests;
-			productName = MarioTests;
-			productReference = B195505C1B69B16B00704047 /* MarioTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +292,6 @@
 				TargetAttributes = {
 					B19550421B69B16B00704047 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					B195505B1B69B16B00704047 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = B19550421B69B16B00704047;
 					};
 				};
 			};
@@ -189,7 +309,6 @@
 			projectRoot = "";
 			targets = (
 				B19550421B69B16B00704047 /* Mario */,
-				B195505B1B69B16B00704047 /* MarioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,16 +318,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B19550521B69B16B00704047 /* Main.storyboard in Resources */,
+				B1E5BA7C1B6A82DD00138E55 /* ballRoll.png in Resources */,
+				B1E5BA5B1B6A7F6100138E55 /* 8.png in Resources */,
+				B1E5BA5A1B6A7F6100138E55 /* 7.png in Resources */,
+				B1E5BA5C1B6A7F6100138E55 /* ball.png in Resources */,
+				B1E5BA601B6A7F6100138E55 /* cloud2.png in Resources */,
+				B1E5BA631B6A7F6100138E55 /* fireball.png in Resources */,
+				B1E5BA821B6A9A6B00138E55 /* yellowLight.png in Resources */,
+				B1E5BA571B6A7F6100138E55 /* 4.png in Resources */,
+				B1E5BA561B6A7F6100138E55 /* 3.png in Resources */,
+				B1E5BA641B6A7F6100138E55 /* gameover.png in Resources */,
+				B1E5BA541B6A7F6100138E55 /* 1.png in Resources */,
+				B1E5BA611B6A7F6100138E55 /* cloud3.png in Resources */,
+				B1E5BA621B6A7F6100138E55 /* clown.png in Resources */,
+				B1E5BA651B6A7F6100138E55 /* marioKilled.png in Resources */,
 				B19550571B69B16B00704047 /* LaunchScreen.xib in Resources */,
+				B1E5BA5E1B6A7F6100138E55 /* city.png in Resources */,
+				B1E5BA811B6A9A6B00138E55 /* redLight.png in Resources */,
+				B1E5BA581B6A7F6100138E55 /* 5.png in Resources */,
+				B1E5BA5F1B6A7F6100138E55 /* cloud1.png in Resources */,
+				B1E5BA551B6A7F6100138E55 /* 2.png in Resources */,
+				B1E5BA801B6A9A6B00138E55 /* blueLight.png in Resources */,
+				B1E5BA591B6A7F6100138E55 /* 6.png in Resources */,
 				B19550541B69B16B00704047 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B195505A1B69B16B00704047 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B1E5BA5D1B6A7F6100138E55 /* block.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,39 +352,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B195504F1B69B16B00704047 /* ViewController.m in Sources */,
-				B195504C1B69B16B00704047 /* AppDelegate.m in Sources */,
+				B1E5BA7A1B6A821200138E55 /* Ball.m in Sources */,
+				B1E5BA771B6A819800138E55 /* MainSceneBall.m in Sources */,
+				B195507F1B69B3C000704047 /* Scene.m in Sources */,
+				B19550761B69B23E00704047 /* BootLogic.m in Sources */,
+				B19550781B69B23E00704047 /* MainScreen.m in Sources */,
+				B1E5BA6E1B6A7FDF00138E55 /* Cloud.m in Sources */,
+				B19550771B69B23E00704047 /* ConsoleScreen.m in Sources */,
+				B19550751B69B23E00704047 /* AppDelegate.m in Sources */,
+				B1E5BA851B6A9B3200138E55 /* Power Pole.m in Sources */,
+				B1E5BA6C1B6A7FDF00138E55 /* Block.m in Sources */,
+				B19550801B69B3C000704047 /* Sprite.m in Sources */,
 				B19550491B69B16B00704047 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B19550581B69B16B00704047 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B19550631B69B16B00704047 /* MarioTests.m in Sources */,
+				B1E5BA6D1B6A7FDF00138E55 /* City.m in Sources */,
+				B1E5BA711B6A7FF000138E55 /* MainScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		B195505E1B69B16B00704047 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B19550421B69B16B00704047 /* Mario */;
-			targetProxy = B195505D1B69B16B00704047 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		B19550501B69B16B00704047 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B19550511B69B16B00704047 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B19550551B69B16B00704047 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,40 +483,6 @@
 			};
 			name = Release;
 		};
-		B195506A1B69B16B00704047 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MarioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mario.app/Mario";
-			};
-			name = Debug;
-		};
-		B195506B1B69B16B00704047 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MarioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mario.app/Mario";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -416,14 +502,7 @@
 				B19550681B69B16B00704047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B19550691B69B16B00704047 /* Build configuration list for PBXNativeTarget "MarioTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B195506A1B69B16B00704047 /* Debug */,
-				B195506B1B69B16B00704047 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

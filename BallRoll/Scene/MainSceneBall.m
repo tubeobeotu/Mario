@@ -121,7 +121,7 @@
                            inScene:self];
     
     subBall.view.center=CGPointMake(ball.view.center.x+1-ballRadius*deltaAngle,y);
-    
+    subBall.view.alpha=0.1;
     
     [self addSprite:subBall];
     
@@ -140,6 +140,11 @@
     }
     
 
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [timer invalidate];
+    [timer2 invalidate];
 }
 
 

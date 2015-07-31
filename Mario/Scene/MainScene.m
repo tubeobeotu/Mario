@@ -12,6 +12,8 @@
 #import "Cloud.h"
 #import "Block.h"
 #import "Power Pole.h"
+#import "SuperMario.h"
+#import "FireBall.h"
 #define city_background_width 1498
 
 @implementation MainScene
@@ -20,9 +22,11 @@
     CGSize citySize;
     NSTimer *timer;
     Cloud *cloud1, *cloud2, *cloud3;
-    UIImageView* poles;
+    Power_Pole* poles;
+    SuperMario* superMario;
     NSMutableArray *blocks;
     CGFloat marioRunSpeed;
+    int previousNumBalls;
 }
 
 - (void)viewDidLoad {
@@ -37,6 +41,9 @@
     [self addCity];
     [self addClouds];
     [self addPole];
+    [self addSuperMario];
+    [self addPole];
+    [self setBall:3];
     marioRunSpeed = 20.0;
     timer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                              target:self
@@ -44,18 +51,19 @@
                                            userInfo:nil
                                             repeats:true];
 }
+-(void)addSuperMario
+{
+    superMario=[[SuperMario alloc]initWithName:@"Mario" inScene:self];
+    superMario.y0=self.size.height-superMario.view.bounds.size.height*0.5-10 ;
+    superMario.view.center=CGPointMake(self.size.width/2,superMario.y0);
+    [self addSprite:superMario];
+}
 -(void)addPole
 {
-    poles=[[UIImageView alloc]initWithFrame:CGRectMake(self.size.width/2,self.size.height-128, 128, 128)];
-    NSMutableArray* images=[[NSMutableArray alloc]initWithCapacity:3];
-    [images addObject:[UIImage imageNamed:@"blueLight"]];
-    [images addObject:[UIImage imageNamed:@"yellowLight"]];
-    [images addObject:[UIImage imageNamed:@"redLight"]];
-    poles.animationImages=images;
-    poles.animationDuration=0.5;
-    poles.animationRepeatCount=0;
-    [self.view addSubview:poles];
-    [poles startAnimating];
+    poles=[[Power_Pole alloc]initWithName:@"Pole"
+                                  inScene:self];
+    poles.view.center=CGPointMake(self.size.width-128, self.size.height-150);
+    [self addSprite:poles];
 }
 - (void) addCity {
     citySize = CGSizeMake(city_background_width, 400);
@@ -103,12 +111,58 @@
 
 - (void) gameloop {
     ///
+   
+    int countofBall=(int)superMario.scene.sprites.count-8;
+    if (countofBall>0)
+    {
+        [self visibleBall:countofBall];
+        [self hideBall:countofBall];
+        
+    }
+    else
+    {
+        [self visibleBall:countofBall];
+    }
     [self moveCityBackAtSpeed:marioRunSpeed];
+    
     for (Sprite *sprite in self.sprites.allValues) {
         [sprite animate];
     }
 }
-- (void) moveCityBackAtSpeed: (CGFloat) speed {
+-(void)visibleBall:(int)countBalls
+{
+    
+   
+    for (int i=0; i<3-countBalls; i++) {
+         NSLog(@"%d",i);
+        [self visibleSpritaByName:[NSString stringWithFormat:@"countfireball%d.png",i]];
+    }
+}
+-(void)hideBall:(int)countBalls
+{
+    previousNumBalls=countBalls;
+    for (int i=2; i>=3-countBalls; i--)
+    {
+        [self hideSpritaByName:[NSString stringWithFormat:@"countfireball%d.png",i]];
+        
+    }
+}
+-(void)setBall:(int)countBalls
+{
+    int x,y;
+    x=200;
+    y=40;
+    for (int i=0; i<countBalls; i++)
+    {
+        FireBall *ball=[[FireBall alloc]initWithName:[NSString stringWithFormat:@"countfireball%d.png",i]
+                                             inScene:self];
+        ball.view.frame = CGRectMake(x, y, 30, 30);
+        x+=30;
+        [self addSprite:ball];
+    }
+}
+- (void) moveCityBackAtSpeed: (CGFloat) speed
+{
     city1.view.center = CGPointMake(city1.view.center.x - speed, city1.view.center.y);
     city2.view.center = CGPointMake(city2.view.center.x - speed, city1.view.center.y);
     if (city1.view.frame.origin.x + citySize.width < 0.0) {

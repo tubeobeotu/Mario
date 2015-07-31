@@ -40,5 +40,15 @@
     [self.sprites removeObjectForKey:spriteName];
     
 }
+-(void)hideSpritaByName:(NSString*) spriteName
+{
+    Sprite* sprite = self.sprites[spriteName];
+    sprite.view.hidden=true;
+}
+-(void)visibleSpritaByName:(NSString*) spriteName
+{
+    Sprite* sprite = self.sprites[spriteName];
+    sprite.view.hidden=false;
+}
 
 @end

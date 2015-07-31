@@ -16,6 +16,9 @@
 		B19550781B69B23E00704047 /* MainScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B19550741B69B23E00704047 /* MainScreen.m */; };
 		B195507F1B69B3C000704047 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = B195507C1B69B3C000704047 /* Scene.m */; };
 		B19550801B69B3C000704047 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = B195507E1B69B3C000704047 /* Sprite.m */; };
+		B1E2C3B71B6BC45E006D3D09 /* SuperMario.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E2C3B61B6BC45E006D3D09 /* SuperMario.m */; };
+		B1E2C3BA1B6BD734006D3D09 /* FireBall.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E2C3B91B6BD734006D3D09 /* FireBall.m */; };
+		B1E2C3BC1B6BD925006D3D09 /* grayfireball.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E2C3BB1B6BD925006D3D09 /* grayfireball.png */; };
 		B1E5BA541B6A7F6100138E55 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA421B6A7F6100138E55 /* 1.png */; };
 		B1E5BA551B6A7F6100138E55 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA431B6A7F6100138E55 /* 2.png */; };
 		B1E5BA561B6A7F6100138E55 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B1E5BA441B6A7F6100138E55 /* 3.png */; };
@@ -65,6 +68,11 @@
 		B195507C1B69B3C000704047 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		B195507D1B69B3C000704047 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
 		B195507E1B69B3C000704047 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
+		B1E2C3B51B6BC45E006D3D09 /* SuperMario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperMario.h; sourceTree = "<group>"; };
+		B1E2C3B61B6BC45E006D3D09 /* SuperMario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperMario.m; sourceTree = "<group>"; };
+		B1E2C3B81B6BD734006D3D09 /* FireBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FireBall.h; sourceTree = "<group>"; };
+		B1E2C3B91B6BD734006D3D09 /* FireBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FireBall.m; sourceTree = "<group>"; };
+		B1E2C3BB1B6BD925006D3D09 /* grayfireball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayfireball.png; sourceTree = "<group>"; };
 		B1E5BA421B6A7F6100138E55 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		B1E5BA431B6A7F6100138E55 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		B1E5BA441B6A7F6100138E55 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 				B1E5BA4F1B6A7F6100138E55 /* cloud3.png */,
 				B1E5BA501B6A7F6100138E55 /* clown.png */,
 				B1E5BA511B6A7F6100138E55 /* fireball.png */,
+				B1E2C3BB1B6BD925006D3D09 /* grayfireball.png */,
 				B1E5BA521B6A7F6100138E55 /* gameover.png */,
 				B1E5BA531B6A7F6100138E55 /* marioKilled.png */,
 			);
@@ -213,6 +222,8 @@
 		B1E5BA401B6A7F1200138E55 /* Sprite */ = {
 			isa = PBXGroup;
 			children = (
+				B1E2C3B81B6BD734006D3D09 /* FireBall.h */,
+				B1E2C3B91B6BD734006D3D09 /* FireBall.m */,
 				B1E5BA661B6A7FDF00138E55 /* Block.h */,
 				B1E5BA671B6A7FDF00138E55 /* Block.m */,
 				B1E5BA681B6A7FDF00138E55 /* City.h */,
@@ -221,6 +232,8 @@
 				B1E5BA6B1B6A7FDF00138E55 /* Cloud.m */,
 				B1E5BA831B6A9B3200138E55 /* Power Pole.h */,
 				B1E5BA841B6A9B3200138E55 /* Power Pole.m */,
+				B1E2C3B51B6BC45E006D3D09 /* SuperMario.h */,
+				B1E2C3B61B6BC45E006D3D09 /* SuperMario.m */,
 			);
 			path = Sprite;
 			sourceTree = "<group>";
@@ -322,6 +335,7 @@
 				B1E5BA5B1B6A7F6100138E55 /* 8.png in Resources */,
 				B1E5BA5A1B6A7F6100138E55 /* 7.png in Resources */,
 				B1E5BA5C1B6A7F6100138E55 /* ball.png in Resources */,
+				B1E2C3BC1B6BD925006D3D09 /* grayfireball.png in Resources */,
 				B1E5BA601B6A7F6100138E55 /* cloud2.png in Resources */,
 				B1E5BA631B6A7F6100138E55 /* fireball.png in Resources */,
 				B1E5BA821B6A9A6B00138E55 /* yellowLight.png in Resources */,
@@ -358,6 +372,7 @@
 				B19550761B69B23E00704047 /* BootLogic.m in Sources */,
 				B19550781B69B23E00704047 /* MainScreen.m in Sources */,
 				B1E5BA6E1B6A7FDF00138E55 /* Cloud.m in Sources */,
+				B1E2C3BA1B6BD734006D3D09 /* FireBall.m in Sources */,
 				B19550771B69B23E00704047 /* ConsoleScreen.m in Sources */,
 				B19550751B69B23E00704047 /* AppDelegate.m in Sources */,
 				B1E5BA851B6A9B3200138E55 /* Power Pole.m in Sources */,
@@ -365,6 +380,7 @@
 				B19550801B69B3C000704047 /* Sprite.m in Sources */,
 				B19550491B69B16B00704047 /* main.m in Sources */,
 				B1E5BA6D1B6A7FDF00138E55 /* City.m in Sources */,
+				B1E2C3B71B6BC45E006D3D09 /* SuperMario.m in Sources */,
 				B1E5BA711B6A7FF000138E55 /* MainScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

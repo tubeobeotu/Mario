@@ -12,17 +12,17 @@
 @class  Scene;
 @interface Sprite : NSObject
 @property (nonatomic, strong) UIView *view;
-@property (nonatomic, strong) UIImageView *imgView;
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic, weak) Scene *scene;
+@property (nonatomic, assign) int fireBallCount;
 
 - (instancetype) initWithName: (NSString*) name
                       ownView: (UIView*) view
                       inScene: (Scene*) scene;
-- (instancetype) initWithName: (NSString*) name
-                      ownView: (UIView*) view
-                      inScene: (Scene*) scene
-                    listImage:(UIImageView*)images;
+
+
+-(instancetype)initWithName:(NSString*)name
+                    inScene:(Scene*)scene;
 - (void) animate;
 - (void) animateWithImages:(NSMutableArray*)images;
 

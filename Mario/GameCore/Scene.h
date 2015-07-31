@@ -17,4 +17,6 @@
 - (void) removeSprite: (Sprite*) sprite;
 
 - (void) removeSpriteByName: (NSString*) spriteName;
+-(void)hideSpritaByName:(NSString*) spriteName;
+-(void)visibleSpritaByName:(NSString*) spriteName;
 @end

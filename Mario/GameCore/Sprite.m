@@ -14,22 +14,19 @@
                       inScene: (Scene*) scene {
     if (self = [super init]) {
         self.name = name;
+        
         self.view = view;
         self.scene = scene;
         
     }
     return self;
 }
-- (instancetype) initWithName: (NSString*) name
-                      ownView: (UIView*) view
-                      inScene: (Scene*) scene
-                    listImage:(UIImageView*)images
+-(instancetype)initWithName:(NSString*)name
+                    inScene:(Scene*)scene;
 {
     if (self = [super init]) {
         self.name = name;
-        self.view = view;
         self.scene = scene;
-        self.imgView=images;
         
     }
     return self;

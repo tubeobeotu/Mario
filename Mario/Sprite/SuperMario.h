@@ -1,5 +1,5 @@
 //
-//  Power Pole.h
+//  SuperMario.h
 //  Mario
 //
 //  Created by nguyenvantu on 7/31/15.
@@ -8,5 +8,7 @@
 
 #import "Sprite.h"
 
-@interface Power_Pole : Sprite
+@interface SuperMario : Sprite
+@property(nonatomic,assign)CGFloat y0;
+@property(nonatomic,assign)BOOL alive;
 @end

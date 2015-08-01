@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BFF07028-D23F-4238-80D6-15B397B90303</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Mario</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>773A6D450CD94A9F494845D8B052517365BCF5B5</key>
+		<string>https://github.com/tubeobeotu/Mario</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mario.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>773A6D450CD94A9F494845D8B052517365BCF5B5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tubeobeotu/Mario</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>773A6D450CD94A9F494845D8B052517365BCF5B5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>773A6D450CD94A9F494845D8B052517365BCF5B5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Mario</string>
+		</dict>
+	</array>
+</dict>
+</plist>

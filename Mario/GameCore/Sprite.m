@@ -22,7 +22,7 @@
     return self;
 }
 -(instancetype)initWithName:(NSString*)name
-                    inScene:(Scene*)scene;
+                    inScene:(Scene*)scene
 {
     if (self = [super init]) {
         self.name = name;

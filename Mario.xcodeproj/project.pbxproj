@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13FA17B1B73E0C700B06E4E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13FA17A1B73E0C700B06E4E /* AVFoundation.framework */; };
+		B13FA18F1B73E29900B06E4E /* 01-main-theme-overworld.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA17D1B73E29900B06E4E /* 01-main-theme-overworld.mp3 */; };
+		B13FA1901B73E29900B06E4E /* 02-underworld.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA17E1B73E29900B06E4E /* 02-underworld.mp3 */; };
+		B13FA1911B73E29900B06E4E /* 03-underwater.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA17F1B73E29900B06E4E /* 03-underwater.mp3 */; };
+		B13FA1921B73E29900B06E4E /* 04-castle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1801B73E29900B06E4E /* 04-castle.mp3 */; };
+		B13FA1931B73E29900B06E4E /* 05-starman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1811B73E29900B06E4E /* 05-starman.mp3 */; };
+		B13FA1941B73E29900B06E4E /* 06-level-complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1821B73E29900B06E4E /* 06-level-complete.mp3 */; };
+		B13FA1951B73E29900B06E4E /* 07-castle-complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1831B73E29900B06E4E /* 07-castle-complete.mp3 */; };
+		B13FA1961B73E29900B06E4E /* 08-you-re-dead.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1841B73E29900B06E4E /* 08-you-re-dead.mp3 */; };
+		B13FA1971B73E29900B06E4E /* 09-game-over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1851B73E29900B06E4E /* 09-game-over.mp3 */; };
+		B13FA1981B73E29900B06E4E /* 10-game-over-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1861B73E29900B06E4E /* 10-game-over-2.mp3 */; };
+		B13FA1991B73E29900B06E4E /* 11-into-the-tunnel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1871B73E29900B06E4E /* 11-into-the-tunnel.mp3 */; };
+		B13FA19A1B73E29900B06E4E /* 12-ending.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1881B73E29900B06E4E /* 12-ending.mp3 */; };
+		B13FA19B1B73E29900B06E4E /* 13-hurry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA1891B73E29900B06E4E /* 13-hurry.mp3 */; };
+		B13FA19C1B73E29900B06E4E /* 14-hurry-underground-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA18A1B73E29900B06E4E /* 14-hurry-underground-.mp3 */; };
+		B13FA19D1B73E29900B06E4E /* 15-hurry-underwater-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA18B1B73E29900B06E4E /* 15-hurry-underwater-.mp3 */; };
+		B13FA19E1B73E29900B06E4E /* 16-hurry-castle-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA18C1B73E29900B06E4E /* 16-hurry-castle-.mp3 */; };
+		B13FA19F1B73E29900B06E4E /* 17-hurry-starman-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA18D1B73E29900B06E4E /* 17-hurry-starman-.mp3 */; };
+		B13FA1A01B73E29900B06E4E /* 18-hurry-overworld-.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FA18E1B73E29900B06E4E /* 18-hurry-overworld-.mp3 */; };
 		B19550491B69B16B00704047 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B19550481B69B16B00704047 /* main.m */; };
 		B19550541B69B16B00704047 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19550531B69B16B00704047 /* Images.xcassets */; };
 		B19550571B69B16B00704047 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19550551B69B16B00704047 /* LaunchScreen.xib */; };
@@ -51,6 +70,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B13FA17A1B73E0C700B06E4E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B13FA17D1B73E29900B06E4E /* 01-main-theme-overworld.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01-main-theme-overworld.mp3"; sourceTree = "<group>"; };
+		B13FA17E1B73E29900B06E4E /* 02-underworld.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02-underworld.mp3"; sourceTree = "<group>"; };
+		B13FA17F1B73E29900B06E4E /* 03-underwater.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03-underwater.mp3"; sourceTree = "<group>"; };
+		B13FA1801B73E29900B06E4E /* 04-castle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "04-castle.mp3"; sourceTree = "<group>"; };
+		B13FA1811B73E29900B06E4E /* 05-starman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05-starman.mp3"; sourceTree = "<group>"; };
+		B13FA1821B73E29900B06E4E /* 06-level-complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "06-level-complete.mp3"; sourceTree = "<group>"; };
+		B13FA1831B73E29900B06E4E /* 07-castle-complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07-castle-complete.mp3"; sourceTree = "<group>"; };
+		B13FA1841B73E29900B06E4E /* 08-you-re-dead.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "08-you-re-dead.mp3"; sourceTree = "<group>"; };
+		B13FA1851B73E29900B06E4E /* 09-game-over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "09-game-over.mp3"; sourceTree = "<group>"; };
+		B13FA1861B73E29900B06E4E /* 10-game-over-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10-game-over-2.mp3"; sourceTree = "<group>"; };
+		B13FA1871B73E29900B06E4E /* 11-into-the-tunnel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "11-into-the-tunnel.mp3"; sourceTree = "<group>"; };
+		B13FA1881B73E29900B06E4E /* 12-ending.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "12-ending.mp3"; sourceTree = "<group>"; };
+		B13FA1891B73E29900B06E4E /* 13-hurry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "13-hurry.mp3"; sourceTree = "<group>"; };
+		B13FA18A1B73E29900B06E4E /* 14-hurry-underground-.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "14-hurry-underground-.mp3"; sourceTree = "<group>"; };
+		B13FA18B1B73E29900B06E4E /* 15-hurry-underwater-.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "15-hurry-underwater-.mp3"; sourceTree = "<group>"; };
+		B13FA18C1B73E29900B06E4E /* 16-hurry-castle-.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "16-hurry-castle-.mp3"; sourceTree = "<group>"; };
+		B13FA18D1B73E29900B06E4E /* 17-hurry-starman-.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "17-hurry-starman-.mp3"; sourceTree = "<group>"; };
+		B13FA18E1B73E29900B06E4E /* 18-hurry-overworld-.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "18-hurry-overworld-.mp3"; sourceTree = "<group>"; };
 		B19550431B69B16B00704047 /* Mario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mario.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19550471B69B16B00704047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B19550481B69B16B00704047 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,15 +154,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B13FA17B1B73E0C700B06E4E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B13FA17C1B73E29900B06E4E /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				B13FA17D1B73E29900B06E4E /* 01-main-theme-overworld.mp3 */,
+				B13FA17E1B73E29900B06E4E /* 02-underworld.mp3 */,
+				B13FA17F1B73E29900B06E4E /* 03-underwater.mp3 */,
+				B13FA1801B73E29900B06E4E /* 04-castle.mp3 */,
+				B13FA1811B73E29900B06E4E /* 05-starman.mp3 */,
+				B13FA1821B73E29900B06E4E /* 06-level-complete.mp3 */,
+				B13FA1831B73E29900B06E4E /* 07-castle-complete.mp3 */,
+				B13FA1841B73E29900B06E4E /* 08-you-re-dead.mp3 */,
+				B13FA1851B73E29900B06E4E /* 09-game-over.mp3 */,
+				B13FA1861B73E29900B06E4E /* 10-game-over-2.mp3 */,
+				B13FA1871B73E29900B06E4E /* 11-into-the-tunnel.mp3 */,
+				B13FA1881B73E29900B06E4E /* 12-ending.mp3 */,
+				B13FA1891B73E29900B06E4E /* 13-hurry.mp3 */,
+				B13FA18A1B73E29900B06E4E /* 14-hurry-underground-.mp3 */,
+				B13FA18B1B73E29900B06E4E /* 15-hurry-underwater-.mp3 */,
+				B13FA18C1B73E29900B06E4E /* 16-hurry-castle-.mp3 */,
+				B13FA18D1B73E29900B06E4E /* 17-hurry-starman-.mp3 */,
+				B13FA18E1B73E29900B06E4E /* 18-hurry-overworld-.mp3 */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
 		B195503A1B69B16B00704047 = {
 			isa = PBXGroup;
 			children = (
+				B13FA17A1B73E0C700B06E4E /* AVFoundation.framework */,
 				B1E5BA721B6A80F600138E55 /* BallRoll */,
 				B19550451B69B16B00704047 /* Mario */,
 				B19550441B69B16B00704047 /* Products */,
@@ -142,6 +207,7 @@
 		B19550451B69B16B00704047 /* Mario */ = {
 			isa = PBXGroup;
 			children = (
+				B13FA17C1B73E29900B06E4E /* sound */,
 				B195506C1B69B1EC00704047 /* Core */,
 				B19550791B69B31D00704047 /* GameCore */,
 				B195507A1B69B32500704047 /* ReSource */,
@@ -332,28 +398,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1E5BA7C1B6A82DD00138E55 /* ballRoll.png in Resources */,
+				B13FA1971B73E29900B06E4E /* 09-game-over.mp3 in Resources */,
 				B1E5BA5B1B6A7F6100138E55 /* 8.png in Resources */,
 				B1E5BA5A1B6A7F6100138E55 /* 7.png in Resources */,
 				B1E5BA5C1B6A7F6100138E55 /* ball.png in Resources */,
 				B1E2C3BC1B6BD925006D3D09 /* grayfireball.png in Resources */,
+				B13FA19D1B73E29900B06E4E /* 15-hurry-underwater-.mp3 in Resources */,
 				B1E5BA601B6A7F6100138E55 /* cloud2.png in Resources */,
 				B1E5BA631B6A7F6100138E55 /* fireball.png in Resources */,
+				B13FA1941B73E29900B06E4E /* 06-level-complete.mp3 in Resources */,
+				B13FA1921B73E29900B06E4E /* 04-castle.mp3 in Resources */,
 				B1E5BA821B6A9A6B00138E55 /* yellowLight.png in Resources */,
+				B13FA19B1B73E29900B06E4E /* 13-hurry.mp3 in Resources */,
+				B13FA19A1B73E29900B06E4E /* 12-ending.mp3 in Resources */,
+				B13FA19F1B73E29900B06E4E /* 17-hurry-starman-.mp3 in Resources */,
+				B13FA1951B73E29900B06E4E /* 07-castle-complete.mp3 in Resources */,
 				B1E5BA571B6A7F6100138E55 /* 4.png in Resources */,
+				B13FA19C1B73E29900B06E4E /* 14-hurry-underground-.mp3 in Resources */,
 				B1E5BA561B6A7F6100138E55 /* 3.png in Resources */,
+				B13FA1981B73E29900B06E4E /* 10-game-over-2.mp3 in Resources */,
 				B1E5BA641B6A7F6100138E55 /* gameover.png in Resources */,
 				B1E5BA541B6A7F6100138E55 /* 1.png in Resources */,
 				B1E5BA611B6A7F6100138E55 /* cloud3.png in Resources */,
+				B13FA1931B73E29900B06E4E /* 05-starman.mp3 in Resources */,
 				B1E5BA621B6A7F6100138E55 /* clown.png in Resources */,
 				B1E5BA651B6A7F6100138E55 /* marioKilled.png in Resources */,
+				B13FA19E1B73E29900B06E4E /* 16-hurry-castle-.mp3 in Resources */,
+				B13FA18F1B73E29900B06E4E /* 01-main-theme-overworld.mp3 in Resources */,
+				B13FA1911B73E29900B06E4E /* 03-underwater.mp3 in Resources */,
 				B19550571B69B16B00704047 /* LaunchScreen.xib in Resources */,
+				B13FA1A01B73E29900B06E4E /* 18-hurry-overworld-.mp3 in Resources */,
+				B13FA1901B73E29900B06E4E /* 02-underworld.mp3 in Resources */,
 				B1E5BA5E1B6A7F6100138E55 /* city.png in Resources */,
 				B1E5BA811B6A9A6B00138E55 /* redLight.png in Resources */,
 				B1E5BA581B6A7F6100138E55 /* 5.png in Resources */,
 				B1E5BA5F1B6A7F6100138E55 /* cloud1.png in Resources */,
 				B1E5BA551B6A7F6100138E55 /* 2.png in Resources */,
+				B13FA1991B73E29900B06E4E /* 11-into-the-tunnel.mp3 in Resources */,
 				B1E5BA801B6A9A6B00138E55 /* blueLight.png in Resources */,
 				B1E5BA591B6A7F6100138E55 /* 6.png in Resources */,
+				B13FA1961B73E29900B06E4E /* 08-you-re-dead.mp3 in Resources */,
 				B19550541B69B16B00704047 /* Images.xcassets in Resources */,
 				B1E5BA5D1B6A7F6100138E55 /* block.png in Resources */,
 			);

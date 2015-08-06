@@ -11,4 +11,5 @@
 @interface SuperMario : Sprite
 @property(nonatomic,assign)CGFloat y0;
 @property(nonatomic,assign)BOOL alive;
+- (void) getKilled;
 @end

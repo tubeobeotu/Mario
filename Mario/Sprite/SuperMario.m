@@ -1,3 +1,5 @@
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "SuperMario.h"
 #import "FireBall.h"
 @implementation SuperMario
@@ -6,6 +8,7 @@
     CGFloat jumpVelocity, fallAcceleration,angle;
     NSDictionary *Balls;
     int fireBallCount;
+    AVAudioPlayer* audioPlayer;
 }
 
 - (instancetype) initWithName: (NSString*) name
@@ -59,7 +62,23 @@
     [self.scene addSprite:fireBall];
     [fireBall startFly:20];
 }
-
+- (void) getKilled {
+    UIImageView* view = (UIImageView*) self.view;
+    [view stopAnimating];
+    view.image = [UIImage imageNamed:@"marioKilled.png"];
+    self.alive = false;
+    [self playSong:@"08-you-re-dead"];
+}
+- (void) playSong: (NSString*) song {
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:song
+                                                         ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    NSError *error;
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url
+                                                         error:&error];
+    [audioPlayer prepareToPlay];
+    [audioPlayer play];
+}
 - (void) startJump {
     if (!isJumping) {
         isJumping = true;

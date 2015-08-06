@@ -39,7 +39,7 @@
                                            target:self
                                          selector:@selector(moveBall)
                                          userInfo:nil
-                                           repeats:true];
+                                          repeats:true];
     timer2=[NSTimer scheduledTimerWithTimeInterval:0.03
                                             target:self
                                           selector:@selector(rmBall)
@@ -117,8 +117,8 @@
     NSLog(botToTop?@"Yes":@"No");
     UIImage* imgBall=[UIImage imageNamed:@"ballRoll"];
     subBall=[[Ball alloc]initWithName:[NSString stringWithFormat:@"ball%d",countBall]
-                           ownView:[[UIImageView alloc]initWithImage:imgBall]
-                           inScene:self];
+                              ownView:[[UIImageView alloc]initWithImage:imgBall]
+                              inScene:self];
     
     subBall.view.center=CGPointMake(ball.view.center.x+1-ballRadius*deltaAngle,y);
     subBall.view.alpha=0.1;
@@ -139,7 +139,7 @@
         ball.view.center=CGPointMake(ball.view.center.x+ballRadius*deltaAngle,y);
     }
     
-
+    
 }
 -(void)viewWillDisappear:(BOOL)animated
 {

@@ -9,5 +9,10 @@
 #import "Block.h"
 
 @implementation Block
-
+- (instancetype) initWithName:(NSString *)name inScene:(Scene *)scene {
+    self = [super initWithName:name
+                       ownView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"block.png"]]
+                       inScene:scene];
+    return self;
+}
 @end

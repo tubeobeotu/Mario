@@ -9,5 +9,5 @@
 #import "Sprite.h"
 
 @interface City : Sprite
-
+@property (nonatomic, assign) BOOL alreadyHaveBlock;
 @end

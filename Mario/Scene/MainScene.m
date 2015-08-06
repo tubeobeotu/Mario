@@ -27,11 +27,12 @@
     NSMutableArray *blocks;
     CGFloat marioRunSpeed;
     int previousNumBalls;
+    BOOL alreadyAddBlocks;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.
+
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
@@ -40,16 +41,20 @@
     self.size = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height - statusNavigationBarHeight);
     [self addCity];
     [self addClouds];
-    [self addPole];
     [self addSuperMario];
-    [self addPole];
+//    [self addPole];
     [self setBall:3];
     marioRunSpeed = 20.0;
+    alreadyAddBlocks = false;
     timer = [NSTimer scheduledTimerWithTimeInterval:0.1
                                              target:self
                                            selector:@selector(gameloop)
                                            userInfo:nil
                                             repeats:true];
+}
+- (void) viewWillDisappear:(BOOL)animated {
+    [timer invalidate];
+    timer = nil;
 }
 -(void)addSuperMario
 {
@@ -58,13 +63,13 @@
     superMario.view.center=CGPointMake(self.size.width/2,superMario.y0);
     [self addSprite:superMario];
 }
--(void)addPole
-{
-    poles=[[Power_Pole alloc]initWithName:@"Pole"
-                                  inScene:self];
-    poles.view.center=CGPointMake(self.size.width-128, self.size.height-150);
-    [self addSprite:poles];
-}
+//-(void)addPole
+//{
+//    poles=[[Power_Pole alloc]initWithName:@"Pole"
+//                                  inScene:self];
+//    poles.view.center=CGPointMake(self.size.width-128, self.size.height-150);
+//    [self addSprite:poles];
+//}
 - (void) addCity {
     citySize = CGSizeMake(city_background_width, 400);
     UIImage* cityBackground = [UIImage imageNamed:@"city"];
@@ -79,10 +84,34 @@
 
     city2.view.frame = CGRectMake(citySize.width, self.size.height - citySize.height, citySize.width, citySize.height);
     
-    [self.view addSubview:city1.view];
     [self.view addSubview:city2.view];
+    [self.view addSubview:city1.view];
+    
 
 }
+- (void) addBlocksToCity: (City*) city {
+    //Only add blocks when city background is off screen
+    if (!city.alreadyHaveBlock && !CGRectIntersectsRect(self.view.bounds, city.view.frame)) {
+        
+        CGFloat averageStep = 250;
+        CGFloat previousBlockXCoordinate = 0.0;
+        blocks = [[NSMutableArray alloc] initWithCapacity:6];
+        int index = 0;
+        while (previousBlockXCoordinate < city_background_width - 50) {
+            Block *block = [[Block alloc] initWithName:[NSString stringWithFormat:@"block%d", index]
+                                               inScene:self];
+            index++;
+            CGFloat x = previousBlockXCoordinate + averageStep + arc4random_uniform(50);
+            
+            block.view.center = CGPointMake(x, city1.view.bounds.size.height - block.view.bounds.size.height * 0.5 - 5);
+            [city.view addSubview:block.view];
+            [blocks addObject:block.view];
+            previousBlockXCoordinate = x;
+        }
+        city.alreadyHaveBlock = true;
+    }
+}
+
 - (void) addClouds {
     cloud1 = [[Cloud alloc] initWithName:@"cloud1"
                                  ownView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cloud1.png"]]
@@ -128,6 +157,8 @@
     for (Sprite *sprite in self.sprites.allValues) {
         [sprite animate];
     }
+    [self checkCollisionBetweenMarioAndBlocks];
+    
 }
 -(void)visibleBall:(int)countBalls
 {
@@ -161,16 +192,16 @@
         [self addSprite:ball];
     }
 }
-- (void) moveCityBackAtSpeed: (CGFloat) speed
-{
+- (void) moveCityBackAtSpeed: (CGFloat)speed {
     city1.view.center = CGPointMake(city1.view.center.x - speed, city1.view.center.y);
-    city2.view.center = CGPointMake(city2.view.center.x - speed, city1.view.center.y);
+    city2.view.center = CGPointMake(city2.view.center.x - speed, city2.view.center.y);
+    
     if (city1.view.frame.origin.x + citySize.width < 0.0) {
         city1.view.frame = CGRectMake(city2.view.frame.origin.x + citySize.width,
                                       city1.view.frame.origin.y,
                                       citySize.width,
                                       citySize.height);
-
+        
     }
     if (city2.view.frame.origin.x + citySize.width < 0.0) {
         city2.view.frame = CGRectMake(city1.view.frame.origin.x + citySize.width,
@@ -178,6 +209,43 @@
                                       citySize.width,
                                       citySize.height);
     }
+    
+    [self addBlocksToCity:city1];
+    [self addBlocksToCity:city2];
+    
+}
+- (BOOL) checkCollisionBetweenMarioAndBlocks {
+    if (!superMario.alive) return false;
+    
+    for (int i = 0; i < blocks.count; i++) {
+        UIView* block  = (UIView*)blocks[i];
+        CGRect blockRect = [block.superview convertRect: block.frame
+                                                 toView: self.view];
+        
+        if (CGRectIntersectsRect(blockRect, CGRectInset(superMario.view.frame, 10, 0))){
+            //NSLog(<#NSString *format, ...#>)
+            [superMario getKilled];
+            marioRunSpeed = 0.0;
+            [self gameOver];
+            return true;
+        }
+        
+    }
+    return false;
+}
+
+- (void) gameOver {
+    UIImageView* dialog = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"gameover.png"]];
+    
+    dialog.center = CGPointMake(self.size.width * 0.5, -dialog.bounds.size.height * 0.5);
+    [self.view addSubview:dialog];
+    
+    [UIView animateWithDuration:2 animations:^{
+        dialog.center = CGPointMake(self.size.width * 0.5, self.size.height * 0.5);
+    } completion:^(BOOL finished) {
+        
+    }];
+    
 }
 
 @end

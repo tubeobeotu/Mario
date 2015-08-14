@@ -52,7 +52,7 @@
     [self.scene.view addGestureRecognizer:swipeRight];
 }
 - (void) fire {
-    if(self.scene.sprites.count>10)
+    if(self.scene.sprites.count>9)
         return;
     fireBallCount ++;
     FireBall *fireBall = [[FireBall alloc] initWithName:[NSString stringWithFormat:@"fireball%d", fireBallCount]

@@ -28,6 +28,7 @@
     CGFloat marioRunSpeed;
     int previousNumBalls;
     BOOL alreadyAddBlocks;
+    int totalBall;
 }
 
 - (void)viewDidLoad {
@@ -37,13 +38,14 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     CGFloat statusNavigationBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height + self.navigationController.navigationBar.bounds.size.height;
-    
+    blocks = [[NSMutableArray alloc]init];
     self.size = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height - statusNavigationBarHeight);
     [self addCity];
     [self addClouds];
     [self addSuperMario];
 //    [self addPole];
-    [self setBall:3];
+    totalBall=3;
+    [self setBall:totalBall];
     marioRunSpeed = 20.0;
     alreadyAddBlocks = false;
     timer = [NSTimer scheduledTimerWithTimeInterval:0.1
@@ -58,9 +60,9 @@
 }
 -(void)addSuperMario
 {
-    superMario=[[SuperMario alloc]initWithName:@"Mario" inScene:self];
-    superMario.y0=self.size.height-superMario.view.bounds.size.height*0.5-10 ;
-    superMario.view.center=CGPointMake(self.size.width/2,superMario.y0);
+    superMario = [[SuperMario alloc]initWithName:@"Mario" inScene:self];
+    superMario.y0 = self.size.height-superMario.view.bounds.size.height*0.5-10 ;
+    superMario.view.center = CGPointMake(self.size.width/2,superMario.y0);
     [self addSprite:superMario];
 }
 //-(void)addPole
@@ -83,9 +85,9 @@
                                inScene:self];
 
     city2.view.frame = CGRectMake(citySize.width, self.size.height - citySize.height, citySize.width, citySize.height);
-    
-    [self.view addSubview:city2.view];
     [self.view addSubview:city1.view];
+    [self.view addSubview:city2.view];
+    
     
 
 }
@@ -93,11 +95,11 @@
     //Only add blocks when city background is off screen
     if (!city.alreadyHaveBlock && !CGRectIntersectsRect(self.view.bounds, city.view.frame)) {
         
-        CGFloat averageStep = 250;
+        CGFloat averageStep = 200;
         CGFloat previousBlockXCoordinate = 0.0;
-        blocks = [[NSMutableArray alloc] initWithCapacity:6];
+        
         int index = 0;
-        while (previousBlockXCoordinate < city_background_width - 50) {
+        while (previousBlockXCoordinate < city_background_width - averageStep+50) {
             Block *block = [[Block alloc] initWithName:[NSString stringWithFormat:@"block%d", index]
                                                inScene:self];
             index++;
@@ -141,7 +143,7 @@
 - (void) gameloop {
     ///
    
-    int countofBall=(int)superMario.scene.sprites.count-8;
+    int countofBall=(int)superMario.scene.sprites.count-7;
     if (countofBall>0)
     {
         [self visibleBall:countofBall];
@@ -164,15 +166,15 @@
 {
     
    
-    for (int i=0; i<3-countBalls; i++) {
-         NSLog(@"%d",i);
+    for (int i = 0; i < totalBall-countBalls; i++) {
+        
         [self visibleSpritaByName:[NSString stringWithFormat:@"countfireball%d.png",i]];
     }
 }
 -(void)hideBall:(int)countBalls
 {
     previousNumBalls=countBalls;
-    for (int i=2; i>=3-countBalls; i--)
+    for (int i = totalBall-1; i >= totalBall-countBalls; i--)
     {
         [self hideSpritaByName:[NSString stringWithFormat:@"countfireball%d.png",i]];
         
@@ -183,7 +185,7 @@
     int x,y;
     x=200;
     y=40;
-    for (int i=0; i<countBalls; i++)
+    for (int i=0; i < countBalls; i++)
     {
         FireBall *ball=[[FireBall alloc]initWithName:[NSString stringWithFormat:@"countfireball%d.png",i]
                                              inScene:self];
@@ -209,9 +211,9 @@
                                       citySize.width,
                                       citySize.height);
     }
-    
-    [self addBlocksToCity:city1];
     [self addBlocksToCity:city2];
+    [self addBlocksToCity:city1];
+    
     
 }
 - (BOOL) checkCollisionBetweenMarioAndBlocks {
@@ -219,15 +221,15 @@
     
     for (int i = 0; i < blocks.count; i++) {
         UIView* block  = (UIView*)blocks[i];
-        CGRect blockRect = [block.superview convertRect: block.frame
+        CGRect blockRect = [[block superview] convertRect: block.frame
                                                  toView: self.view];
-        
-        if (CGRectIntersectsRect(blockRect, CGRectInset(superMario.view.frame, 10, 0))){
+               if (CGRectIntersectsRect(blockRect, CGRectInset(superMario.view.frame, 10, 0))){
             //NSLog(<#NSString *format, ...#>)
-            [superMario getKilled];
-            marioRunSpeed = 0.0;
-            [self gameOver];
-            return true;
+                   NSLog(@"tim dc roi");
+//            [superMario getKilled];
+//            marioRunSpeed = 0.0;
+//            [self gameOver];
+//            return true;
         }
         
     }
